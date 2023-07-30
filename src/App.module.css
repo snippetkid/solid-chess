@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
 }
 
 .logo {
@@ -9,7 +12,7 @@
 }
 
 .header {
-  background-color: #282c34;
+  background-color: #F3E0BF;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

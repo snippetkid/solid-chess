@@ -1,0 +1,11 @@
+.Board {
+  background-color: #8f9c9e;
+  display: grid;
+  height: 95vmin;
+  width: 95vmin;
+
+  border-radius: 5px;
+
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+}
