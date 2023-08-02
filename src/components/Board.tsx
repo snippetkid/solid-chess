@@ -2,8 +2,8 @@ import styles from "./Board.module.css";
 import { Square } from "./Square";
 
 export const Board = () => {
-  const light = "#F7FFF6";
-  const dark = "#1FA187";
+  const light = "#fddeb2";
+  const dark = "#df8456";
   const Ranks = [1, 2, 3, 4, 5, 6, 7, 8];
   const Files = ["a", "b", "c", "d", "e", "f", "g", "h"];
   return (
