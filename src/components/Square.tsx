@@ -1,7 +1,13 @@
+import { Piece } from "./Piece";
+
 interface Props {
-  color: string;
+  shade: string;
+  name: string;
 }
 
-export const Square = ({ color }: Props) => {
-  return <div style={{ "background-color": color }}></div>;
+export const Square = ({ name, shade }: Props) => {
+  return <div id={name} style={{ "background-color": shade }}>
+    <Piece shade={name.includes('1') ? 'light' : 'dark'} />
+  </div>
+
 };
