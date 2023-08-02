@@ -7,8 +7,8 @@ interface Props {
 	type?: string;
 }
 export const Piece = ({ shade, type = 'pawn' }: Props) => {
-	const fillColor = shade === 'light' ? '#F5A4A3' : '#6B4D57'
-	const strokeColor = shade === 'light' ? '#232D30' : '#0A131F'
+	const fillColor = shade === 'light' ? '#f6f8fb' : '#3C4D53'
+	const strokeColor = shade === 'light' ? '#232D30' : '#0F1D2E'
 
 
 	return(<div class={styles.Piece}>
