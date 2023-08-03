@@ -8,6 +8,6 @@ export enum Piece {
 }
 
 export enum Shade {
-    Dark,
-    Light
+    Dark = 'd',
+    Light = 'l'
 }
