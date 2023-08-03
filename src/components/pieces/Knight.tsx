@@ -1,8 +1,6 @@
-interface Props {
-    stroke: string,
-    fill: string
-}
-export const Knight = ({ stroke, fill }: Props) => {
+import { PieceProps } from "../../models/interfaces"
+
+export const Knight = ({ stroke, fill }: PieceProps) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

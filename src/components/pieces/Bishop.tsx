@@ -1,9 +1,6 @@
-interface Props {
-    stroke: string,
-    fill: string
-}
+import { PieceProps } from "../../models/interfaces"
 
-export const Bishop = ({ stroke, fill }: Props) => {
+export const Bishop = ({ stroke, fill }: PieceProps) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

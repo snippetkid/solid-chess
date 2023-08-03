@@ -1,6 +1,7 @@
 import styles from './Piece.module.css'
 import { Bishop } from './pieces/Bishop';
 import { Knight } from './pieces/Knight';
+import { Rook } from './pieces/Rook';
 
 interface Props {
 	shade: string;
@@ -13,6 +14,7 @@ export const Piece = ({ shade, type = 'pawn' }: Props) => {
 
 	return(<div class={styles.Piece}>
 		{/* <Knight stroke={strokeColor} fill={fillColor} /> */}
-		<Bishop stroke={strokeColor} fill={fillColor}/>
+		{/* <Bishop stroke={strokeColor} fill={fillColor}/> */}
+		<Rook stroke={strokeColor} fill={fillColor}/>
 	</div>)
 }
