@@ -30,5 +30,6 @@ export interface IPiece{
 
 export interface ISquare{
   name:string;
-  shade:string
+  shade:string;
+  piece?:IPiece;
 }

@@ -2,7 +2,7 @@ export enum Piece {
     BISHOP = 'B',
     KING = 'K',
     KNIGHT = 'N',
-    PAWN = '',
+    PAWN = 'P',
     QUEEN = 'Q',
     ROOK = 'R',
 }

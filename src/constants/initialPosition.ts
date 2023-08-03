@@ -232,6 +232,5 @@ const InitialPosition : IPieceData[] = [
 ];
 
 export const getInitialPosition = (square: string) => {
-    
-
+    return InitialPosition.find(i=>`${i.file}${i.rank}` === square);
 }
