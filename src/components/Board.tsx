@@ -24,18 +24,46 @@ export const Board = () => {
     return squares;
   }
 
-  const [squares, setSquares] = createSignal(initSquares())
-
+  const [squares, setSquares] = createSignal(initSquares());
+  const [selectedSquare, setSelectedSquare] = createSignal<ISquare>();
   const moves = []
+  const onSquareClick = (square: ISquare) => {
 
-  const onSquareClick = () => {
+    if (selectedSquare()) {
+      if (selectedSquare()?.name !== square.name) {
 
+        const pieceToMove = selectedSquare()?.piece;
+        const sqs = squares().map(sq => {
+          if (sq.name === square.name) {
+            return { ...sq, piece: pieceToMove };
+          }
+
+          if (sq.name === selectedSquare()?.name) {
+            return { ...sq, piece: undefined };
+          }
+          return sq;
+        });
+        const squareToMove = sqs.find(sq => sq.name === square.name);
+        const squareToEmpty = sqs.find(sq => sq.name === selectedSquare()?.name)
+        const isCapture = !!squareToMove?.piece;
+        if (squareToMove !== undefined) {
+          squareToMove.piece = pieceToMove;
+          squareToEmpty!.piece = undefined;
+          setSquares(sqs);
+        }
+        console.log(`Moving ${selectedSquare()?.piece?.shade} ${selectedSquare()?.piece?.type} to ${square.name}`);
+      }
+      setSelectedSquare();
+    }
+    else {
+      setSelectedSquare(square);
+    }
   }
 
   return (
     <div class={styles.Board}>
       <For each={squares()}>
-        {(square) => <Square name={square.name} shade={square.shade} piece={square.piece} onClick={() => console.log(square.name)} />}
+        {(square) => <Square name={square.name} shade={square.shade} piece={square.piece} onClick={() => onSquareClick(square)} />}
       </For>
     </div>
   );

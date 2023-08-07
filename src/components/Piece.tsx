@@ -11,35 +11,36 @@ interface Props {
 	square: string;
 	shade: Shade;
 	type: PieceType;
+	onClick: () => void;
 }
-export const Piece = ({ square, shade, type }: Props) => {
-	const fillColor = shade === Shade.Light ? '#f6f8fb' : '#3C4D53'
-	const strokeColor = shade === Shade.Light ? '#232D30' : '#0F1D2E'
+export const Piece = (props: Props) => {
+	const fillColor = props.shade === Shade.Light ? '#f6f8fb' : '#3C4D53'
+	const strokeColor = props.shade === Shade.Light ? '#232D30' : '#0F1D2E'
 	const getPiece = () => {
-		const props = {
+		const _props = {
 			stroke: strokeColor,
 			fill: fillColor,
-			square
+			square:props.square
 		}
-		switch (type) {
+		switch (props.type) {
 			case PieceType.PAWN:
-				return <Pawn {...props} />
+				return <Pawn {..._props} />
 			case PieceType.BISHOP:
-				return <Bishop {...props} />
+				return <Bishop {..._props} />
 			case PieceType.KNIGHT:
-				return <Knight {...props} />
+				return <Knight {..._props} />
 			case PieceType.QUEEN:
-				return <Queen {...props} />
+				return <Queen {..._props} />
 			case PieceType.KING:
-				return <King {...props} />
+				return <King {..._props} />
 			case PieceType.ROOK:
-				return <Rook {...props} />
+				return <Rook {..._props} />
 			default:
 				throw 'Piece not supported';
 		}
 	}
 
-	return (<div id={square} class={styles.Piece}>
+	return (<div id={props.square} class={styles.Piece}>
 		{getPiece()}
 	</div>)
 }
