@@ -1,13 +1,11 @@
-import type { Component } from 'solid-js';
-
-import logo from './logo.svg';
-import styles from './App.module.css';
-import { Board } from './components/Board';
+import type { Component } from "solid-js";
+import styles from "./App.module.css";
+import { Game } from "./components/Game";
 
 const App: Component = () => {
   return (
     <div class={styles.App}>
-    <Board/>
+      <Game />
     </div>
   );
 };

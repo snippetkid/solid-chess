@@ -1,10 +1,10 @@
 export enum Piece {
-    BISHOP = 'B',
-    KING = 'K',
-    KNIGHT = 'N',
-    PAWN = 'P',
-    QUEEN = 'Q',
-    ROOK = 'R',
+    BISHOP = 'b',
+    KING = 'k',
+    KNIGHT = 'n',
+    PAWN = 'p',
+    QUEEN = 'q',
+    ROOK = 'r',
 }
 
 export enum Shade {

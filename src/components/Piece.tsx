@@ -11,7 +11,7 @@ interface Props {
 	square: string;
 	shade: Shade;
 	type: PieceType;
-	onClick: () => void;
+	onClick?: () => void;
 }
 export const Piece = (props: Props) => {
 	const fillColor = props.shade === Shade.Light ? '#f6f8fb' : '#3C4D53'
@@ -40,7 +40,7 @@ export const Piece = (props: Props) => {
 		}
 	}
 
-	return (<div id={props.square} class={styles.Piece}>
+	return (<div id={props.square} class={styles.Piece} onClick={props.onClick}>
 		{getPiece()}
 	</div>)
 }
