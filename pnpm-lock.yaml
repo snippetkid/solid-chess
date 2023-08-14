@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  chess.js:
+    specifier: ^1.0.0-beta.6
+    version: 1.0.0-beta.6
   solid-js:
     specifier: ^1.7.6
     version: 1.7.6
@@ -861,6 +864,10 @@ packages:
       escape-string-regexp: 1.0.5
       supports-color: 5.5.0
     dev: true
+
+  /chess.js@1.0.0-beta.6:
+    resolution: {integrity: sha512-sqBfX1VL3csSyqVM5ogbKA+aRlZyWDh276ruWXphwI0lDUMs7iYjZs29BOi49f7mXeunJE7cdfnIZhihsyLnsA==}
+    dev: false
 
   /color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
